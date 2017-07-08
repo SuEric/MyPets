@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1080.8" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Pet Table View Controller-->
         <scene sceneID="hle-is-bpP">
             <objects>
-                <viewController id="fmV-ya-vMP" sceneMemberID="viewController">
+                <viewController id="fmV-ya-vMP" customClass="PetTableViewController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bw3-sJ-kKw"/>
                         <viewControllerLayoutGuide type="bottom" id="3kC-lb-6uL"/>
@@ -72,12 +72,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="X6r-SG-Plt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" textLabel="cS3-up-mbL" style="IBUITableViewCellStyleDefault" id="X6r-SG-Plt">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X6r-SG-Plt" id="pOa-Le-SvC">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cS3-up-mbL">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -85,6 +94,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.44868861609999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="petTableView" destination="GhT-S5-ve7" id="p8e-BN-L4h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vH-17-gS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
