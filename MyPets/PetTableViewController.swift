@@ -10,7 +10,7 @@ import UIKit
 
 class PetTableViewController: UIViewController, UITableViewDataSource {
 
-    let pets = [
+    var pets = [
         "Silver",
         "Kerchak",
         "Giorgio",
@@ -59,6 +59,12 @@ class PetTableViewController: UIViewController, UITableViewDataSource {
         cell?.textLabel?.text = pets[indexPath.row]
         
         return cell!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let newPetController = segue.destination as! AddPetViewController
+        
+        newPetController.petsController = self
     }
     
 }
